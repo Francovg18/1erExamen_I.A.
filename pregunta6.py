@@ -5,7 +5,6 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn import tree
 import matplotlib.pyplot as plt
 
-# Cargar datos
 datos = []
 ruta_archivo = "C:/Users/Alex Choque/Downloads/iris.csv"
 
@@ -13,7 +12,7 @@ with open(ruta_archivo, newline='') as csvfile:
     lector = csv.reader(csvfile)
     for fila in lector:
         datos.append(fila)
-# Cargar los datos en un DataFrame
+
 df = pd.DataFrame(datos[1:], columns=datos[0])
 
 # Convertir las columnas numéricas a tipo float
