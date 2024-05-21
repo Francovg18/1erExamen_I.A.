@@ -2,7 +2,6 @@ import pandas as pd
 from sklearn.impute import SimpleImputer
 from sklearn.preprocessing import OneHotEncoder, StandardScaler, OrdinalEncoder, MinMaxScaler
 
-# Cargar el dataset desde la ruta proporcionada
 ruta_archivo = "C:/Users/Alex Choque/Downloads/iris.csv"
 datos = pd.read_csv(ruta_archivo)
 
@@ -32,7 +31,6 @@ algoritmos de machine learning.
 scaler = StandardScaler()
 datos[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']] = scaler.fit_transform(datos[['sepal_length', 'sepal_width', 'petal_length', 'petal_width']])
 
-# Añadir una columna categórica ficticia para la demostración
 datos['flower_rank'] = ['low', 'medium', 'medium', 'high', 'medium', 'high', 'low', 'medium', 'low', 'high'] * (len(datos) // 10)
 
 '''
@@ -43,7 +41,7 @@ ordinal_encoder = OrdinalEncoder(categories=[['low', 'medium', 'high']])
 datos[['flower_rank']] = ordinal_encoder.fit_transform(datos[['flower_rank']])
 
 '''
-Normalización (MinMaxScaler): Escala las características a un rango específico,
+5.- Normalización (MinMaxScaler): Escala las características a un rango específico,
 típicamente entre 0 y 1, lo que puede ser útil para algoritmos que requieren un 
 rango de entrada específico.
 '''
