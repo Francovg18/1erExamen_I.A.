@@ -14,17 +14,17 @@ class Persona:
     def __str__(self):
         return f"{self.nombre} ({self.edad} años)"
 
-# Definición de los miembros de la familia
+# Miembros
 abuelo = Persona("Antonio", 85)
-abuela = Persona("Josefa", 80)
-abuela2 = Persona("Nicola", 82)
-padre = Persona("Damián", 50)
-madre = Persona("Balvina", 48)
-hijo1 = Persona("Ximena", 25)
-hijo2 = Persona("Boris", 23)
-hijo3 = Persona("Brayam", 20)
+abuela = Persona("Ana", 80)
+abuela2 = Persona("Rosa", 82)
+padre = Persona("Pedro", 50)
+madre = Persona("Roxana", 48)
+hijo1 = Persona("Juan", 25)
+hijo2 = Persona("Luis", 23)
+hijo3 = Persona("Roberto", 20)
 
-# Estableciendo relaciones familiares
+# relaciones familiares
 padre.agregar_padre(abuelo)
 padre.agregar_padre(abuela)
 madre.agregar_padre(abuela2)
@@ -36,7 +36,7 @@ madre.agregar_hijo(hijo1)
 madre.agregar_hijo(hijo2)
 madre.agregar_hijo(hijo3)
 
-# Imprimiendo la estructura familiar
+# Imprimiendo 
 print("Abuelos:")
 print(f"\t{abuelo}, {abuela}")
 print(f"\t{abuela2}")
